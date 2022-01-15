@@ -115,6 +115,3 @@ Numărul de ”*” încercuite este: 2
 Numărul monoamelor centrale este: 2
 Cazul algoritmului de simplificare este: 2
 Nr. de forme simplificate ale funcției este: 2
-
-Process finished with exit code 0
-
