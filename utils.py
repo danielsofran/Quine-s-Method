@@ -8,7 +8,7 @@ def afisare(l):
 
 def citire():
     Monom.ordin = int(input("Introduceti numarul de variabile x: "))
-    inputstr = input("Introduceti monoamele in binar: ")
+    inputstr = input("Introduceti monoamele in baza 10 sau 2: ")
 
     #inputstr = "15 13 14 10 2 4"
     #inputstr = "1 3 4 5 6 7 8 9 10 11 12 14"
