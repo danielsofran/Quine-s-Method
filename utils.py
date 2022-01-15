@@ -8,10 +8,10 @@ def afisare(l):
 
 def citire():
     Monom.ordin = int(input("Introduceti numarul de variabile x: "))
-    inputstr = input("Introduceti monoamele in baza 10 sau 2: ")
+    #inputstr = input("Introduceti mintermii in baza 10 sau 2: ")
 
     #inputstr = "15 13 14 10 2 4"
-    #inputstr = "1 3 4 5 6 7 8 9 10 11 12 14"
+    inputstr = "1 3 4 5 6 7 8 9 10 11 12 14"
     _ = inputstr.split()
     rez = []
     for __ in _:
@@ -38,7 +38,7 @@ def getstats(nivele, maximale):
                     print(f"max{index}: {m} = {m.xuri()}= {smin}")
                     index += 1
     print(f"\nNumarul de linii din primul tabel: {linii}\nNumarul de bife: {bife}\nNumarul de linii nebifate/momame maximale: {linii-bife}\n")
-    return linii-bife
+    return linii
 
 def getmintermi(maximale):
     mintermi = []
@@ -76,3 +76,13 @@ def showtable(table, maximale):
 def marcat(ch):
     if ch == 'x' or ch == 'O': return True
     return False
+
+def showrez(*args):
+    print(f"Numărul total al liniilor (distincte) din primul tabel Quine-Mc’Clusky este: {args[0]}")
+    print(f"Numărul monoamelor maximale este: {args[1]}")
+    print(f"Numărul total de ”*” din cel de al doilea tabel Quine-Mc’Clusky este: {args[2]}")
+    print(f"Numărul de ”*” încercuite este: {args[3]}")
+    print(f"Numărul monoamelor centrale este: {args[4]}")
+    print(f"Cazul algoritmului de simplificare este: {args[5]}")
+    print(f"Nr. de forme simplificate ale funcției este: {args[6]}")
+

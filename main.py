@@ -59,10 +59,12 @@ afisare(nivele)
 monoame_maximale = []
 monoame_centrale = []
 poz_monoame_centrale = []
-getstats(nivele, monoame_maximale)
+linii = getstats(nivele, monoame_maximale)
 
 #region tabel2
 table, n = createtable(monoame_maximale)
+incercuite = 0
+stelutze = 0
 for i in range(n):
     stars_per_line = 0
     si, sj = 0, 0
@@ -72,9 +74,11 @@ for i in range(n):
             si, sj = i, j
     if stars_per_line == 1:
         table[si][sj] = 'O'
+        incercuite += 1
         if not monoame_maximale[sj] in monoame_centrale:
             monoame_centrale.append(monoame_maximale[sj])
             poz_monoame_centrale.append(sj+1)
+    stelutze += stars_per_line
 #endregion
 _l = len(monoame_centrale)
 if _l == 0:
@@ -87,8 +91,11 @@ if _l == 0:
     caz = 3
     print("Caz 3\n")
 elif _l == len(monoame_maximale):
-    print("Caz 1.\n1 forma simplificata")
+    caz = 1
+    print("Caz 1\n1 forma simplificata")
     showtable(table, monoame_maximale)
+    print("\n")
+    showrez(linii, len(monoame_maximale), stelutze, incercuite, len(monoame_centrale), caz, 1)
     exit(0)
 else: caz = 2
 
@@ -163,8 +170,9 @@ def back(l):
 back([])
 print(f"Numarul formelor simplificate: {len(rez)}")
 print("\n............................................\n"
-      "████████████████████████████████████████████\n"
-      "")
+      "████████████████████████████████████████████\n\n")
+
+showrez(linii, len(monoame_maximale), stelutze, incercuite, len(monoame_centrale), caz, len(rez))
 
 
 # for g in grupe:
