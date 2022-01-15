@@ -15,9 +15,10 @@ python -m pip install -U prettytable
 ## Legendă
 
 În primul tabel:
-- x: bifă
-- numărul nivelului: numărul de - din grupurile pe care le conține
-- numărul grupei: numărul de 1 al monoamelor conținute
+- x: **bifă**
+- numărul nivelului: **numărul de -** din grupurile pe care le conține
+- numărul grupei: **numărul de 1** al monoamelor conținute
+- lista de numere: **indicii mintermilor** din care monomul respectiv a fost obținut
 
 În cel de-al doilea tabel:
 - O: * încercuită
