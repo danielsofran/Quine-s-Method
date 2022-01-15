@@ -2,10 +2,14 @@
 
 ## Instalare
 
-Acest proiect necesita instalarea pachetului **prettytable**
-
+Acest proiect necesită instalarea pachetului **prettytable**
+În Visual Studio:
 ```bash
 pip install prettytable
+```
+În interpretorul nativ:
+```bash
+python -m pip install -U prettytable
 ```
 
 ## Legendă
