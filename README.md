@@ -15,3 +15,6 @@ pip install prettytable
 - █: spațiu hașurat
 - x: * hașurată
 
+## Rulare
+
+Se va rula script-ul **main.py**.
