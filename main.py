@@ -53,6 +53,7 @@ while True: # loop nivele
     elif len(n.grupe) == 0:
         nivele.pop()
         break
+print("\nPrimul tabel\n")
 afisare(nivele)
 #endregion
 
@@ -162,13 +163,29 @@ def back(l):
                 if nrmint < imin:
                     imin = nrmint
                     rez.clear()
-                    rez.append(l)
+                    rez.append(l[:])
                 elif nrmint == imin:
-                    rez.append(imin)
+                    rez.append(l[:])
     l.pop()
 
 back([])
-print(f"Numarul formelor simplificate: {len(rez)}")
+print(f"Numarul formelor simplificate: {len(rez)}\n")
+
+index = 1
+for p in rez:
+    fs = monoame_centrale[:]  # forma simplificata
+    for i in range(len(p)):
+        if p[i] == True:
+            fs.append(rest_monoame[i])
+    print(f"f{index}:", end=" ")
+    index += 1
+    sir = ""
+    sx = ""
+    for monom in fs:
+        sir += f"max{monoame_maximale.index(monom)+1} v "
+        sx += f"{monom.xuri()} v "
+    print(sir[:-2] + "= " + sx[:-2])
+
 print("\n............................................\n"
       "████████████████████████████████████████████\n\n")
 

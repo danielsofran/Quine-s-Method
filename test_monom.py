@@ -1,7 +1,9 @@
 from monom import Monom
 
 def test_constr():
+    Monom.ordin = 4
     m = Monom(12)
+
     assert m[1] == 1
     assert m[2] == 1
     assert m[3] == 0

@@ -5,6 +5,8 @@ class Monom:
         self.data = ""
         self.grup = grup
         self.bifat = bifat
+        if isinstance(nr, int) and nr >= 2**Monom.ordin:
+            nr = str(nr)
         if isinstance(nr, str):
             self.data = nr
             if len(self.data) < Monom.ordin:
@@ -24,9 +26,9 @@ class Monom:
         rez = ""
         for i in range(len(self.data)):
             if self.data[i] == '1':
-                rez += f"(x{i+1}) "
+                rez += f"x{i+1}"
             elif self.data[i] == '0':
-                rez += f"(not x{i+1}) "
+                rez += f"(not x{i+1})"
         return rez
 
     def __len__(self):
