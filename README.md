@@ -3,6 +3,7 @@
 ## Instalare
 
 Acest proiect necesită instalarea pachetului **prettytable**
+
 În Visual Studio:
 ```bash
 pip install prettytable
